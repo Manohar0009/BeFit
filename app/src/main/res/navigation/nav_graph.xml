@@ -1,0 +1,27 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginActivity">
+
+    <!-- Define LoginActivity as an activity -->
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.befit.LoginActivity"
+        android:label="Login"
+        tools:layout="@layout/login_activity" />
+
+    <!-- Define RegisterActivity as a separate activity -->
+    <activity
+        android:id="@+id/registerActivity"
+        android:name="com.example.befit.RegisterActivity"
+        android:label="Register"
+        tools:layout="@layout/activity_register" />
+
+    <!-- Define action to navigate from LoginActivity to RegisterActivity -->
+    <action
+        android:id="@+id/action_login_to_register"
+        app:destination="@id/registerActivity"
+        app:launchSingleTop="true" />
+
+</navigation>

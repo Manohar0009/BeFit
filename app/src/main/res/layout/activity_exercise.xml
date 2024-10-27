@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--</RelativeLayout>-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <!-- Exercise Title -->
+    <TextView
+        android:id="@+id/exerciseTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exercise of the Day"
+        android:textSize="24sp"
+        android:textColor="@color/text_color"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/countdownTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:textColor="@color/dark_blue"
+        android:layout_gravity="center"
+        android:layout_below="@id/ratingLayout"
+        android:visibility="gone" />
+    <!-- Initially set visibility to gone -->
+
+    <!-- Exercise Images -->
+    <LinearLayout
+        android:id="@+id/exerciseImagesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/exerciseTitleTextView"
+        android:layout_marginTop="32dp">
+
+    <!-- Add your image views here -->
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Exercise"
+            android:layout_centerInParent="true"/>
+
+
+        <ImageView
+            android:id="@+id/exerciseImage1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/exercise1"/>
+
+        <ImageView
+            android:id="@+id/exerciseImage2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/exercise2"/>
+
+        <ImageView
+            android:id="@+id/exerciseImage3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/exercise3"/>
+
+        <ImageView
+            android:id="@+id/exerciseImage4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/exercise4"/>
+
+        <ImageView
+            android:id="@+id/exerciseImage5"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/exercise5"/>
+
+        <ImageView
+            android:id="@+id/exerciseImage6"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/exercise6"/>
+
+        <ImageView
+            android:id="@+id/exerciseImage7"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/exercise7"/>
+
+    </LinearLayout>
+
+
+    <!-- RatingBar for Exercise Rating -->
+    <LinearLayout
+        android:id="@+id/ratingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/exerciseImagesLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <!-- Light black background for RatingBar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray"
+                android:gravity="center">
+
+                <RatingBar
+                    android:id="@+id/exerciseRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="0.5"
+                    android:rating="4.0"
+                    android:layout_marginStart="15dp" /> <!-- Adjust margin as needed -->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <!-- Progress Bar for Exercise Progress -->
+    <ProgressBar
+        android:id="@+id/exerciseProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ratingLayout"
+        android:layoutDirection="ltr"
+        android:layout_marginTop="32dp"
+        android:progress="50"
+        android:progressTint="@color/colorPrimary"
+        android:indeterminate="false"/>
+
+
+
+    <!-- Pink Colored Background for Timer -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/exerciseProgressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:background="@color/pink">
+
+        <!-- Timer TextView -->
+        <TextView
+            android:id="@+id/exerciseDurationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/black"
+            android:textSize="48sp" /> <!-- Increased text size -->
+
+        <!--            android:text="00:20"-->
+
+    </RelativeLayout>
+
+    <!-- Buttons for Pause, Reset Timer, and Exit -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_marginBottom="32dp">
+
+        <!-- Buttons for Pause and Reset Timer -->
+        <LinearLayout
+            android:id="@+id/topButtonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Button to Pause the Exercise -->
+            <Button
+                android:id="@+id/pauseButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pause Exercise"
+                android:textSize="18sp"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Button to Reset the Timer -->
+            <Button
+                android:id="@+id/resetButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:onClick="resetTimer"
+                android:text="Reset Timer" />
+        </LinearLayout>
+
+        <!-- Button to Exit the Page -->
+        <Button
+            android:id="@+id/exitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Exit"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <!-- Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</RelativeLayout>

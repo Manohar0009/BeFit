@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D7FDC6">
+
+    <!-- Header CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/headerCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="#0CC3FF"
+        app:cardBackgroundColor="#FFF8B5"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:id="@+id/headerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Fitness Progress"
+            android:textColor="#333333"
+            android:textSize="32sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Divider Line -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/headerCardView"
+        android:layout_marginTop="16dp"
+        android:background="#CCCCCC" />
+
+    <!-- Total Exercises Completed CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/totalExercisesCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_margin="16dp"
+        android:background="#2196F3"
+        app:cardBackgroundColor="#C7C5F6"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:id="@+id/totalExercisesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="Total Exercises Completed"
+            android:textColor="#333333"
+            android:textSize="22sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Total Pause Time CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/totalPauseTimeCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totalExercisesCardView"
+        android:layout_margin="16dp"
+        android:background="@color/light_blue"
+        app:cardBackgroundColor="#BCFAF0"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:id="@+id/totalPauseTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="Total Pause Time: "
+            android:textColor="#333333"
+            android:textSize="22sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Total Calories Burned CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/totalCaloriesBurnedCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totalPauseTimeCardView"
+        android:layout_margin="16dp"
+        android:background="@color/light_blue"
+        app:cardBackgroundColor="#F5CAFF"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:id="@+id/totalCaloriesBurnedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="Total Calories Burned: "
+            android:textColor="#333333"
+            android:textSize="22sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Total Exercise Duration CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/totalExerciseDurationCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totalCaloriesBurnedCardView"
+        android:layout_margin="16dp"
+        android:background="@color/light_blue"
+        app:cardBackgroundColor="#FBC9D9"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:id="@+id/totalExerciseDurationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="Total Exercise Duration: "
+            android:textColor="#333333"
+            android:textSize="22sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Button to update progress -->
+    <Button
+        android:id="@+id/updateProgressButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totalExerciseDurationCardView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button_background"
+        android:text="Update Progress"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/resetProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updateProgressButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button_background"
+        android:text="Reset Progress"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <!-- Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</RelativeLayout>

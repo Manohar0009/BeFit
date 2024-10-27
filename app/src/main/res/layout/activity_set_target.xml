@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3CEEF">
+
+    <!-- Daily Target Section -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dailyTargetCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="#A9F1B8"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/dailyTargetLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="148dp"
+                android:text="Daily Target"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/dailyTargetEditText"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dailyTargetLabel"
+                android:layout_marginStart="-154dp"
+                android:layout_marginTop="22dp"
+                android:layout_toEndOf="@id/dailyTargetLabel"
+                android:backgroundTint="#FF0000"
+                android:hint="Enter daily target"
+                android:inputType="number"
+                android:textColor="@color/darker_gray"
+                app:boxStrokeColor="@color/colorAccent"
+                app:hintTextColor="@color/colorHintText" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Weekly Target Section -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/weeklyTargetCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dailyTargetCardView"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="#9CA6FA"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/weeklyTargetLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="129dp"
+                android:text="Weekly Target"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/weeklyTargetEditText"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weeklyTargetLabel"
+                android:layout_marginStart="-153dp"
+                android:layout_marginTop="17dp"
+                android:layout_toEndOf="@id/weeklyTargetLabel"
+                android:backgroundTint="#F00000"
+                android:hint="Enter weekly target"
+                android:inputType="number"
+                android:textColor="@color/darker_gray"
+                app:boxStrokeColor="@color/colorAccent"
+                app:hintTextColor="@color/colorHintText" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Button to Save Targets -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/saveTargetCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weeklyTargetCardView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        app:cardBackgroundColor="#0000FF"
+        app:cardCornerRadius="8dp">
+
+        <Button
+            android:id="@+id/saveTargetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:paddingStart="24dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="12dp"
+            android:text="Save Targets"
+            android:textColor="@android:color/white" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Button to reset data-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/resetTargetCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/saveTargetCardView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        app:cardBackgroundColor="#FFA500"
+        app:cardCornerRadius="8dp">
+
+        <Button
+            android:id="@+id/resetTargetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:paddingStart="24dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="12dp"
+            android:text="Reset Targets"
+            android:textColor="@android:color/white" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- TextView to display daily target progress -->
+    <TextView
+        android:id="@+id/dailyTargetProgressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resetTargetCardView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Exercises done today: 0/0"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <!-- TextView to display weekly target progress -->
+    <TextView
+        android:id="@+id/weeklyTargetProgressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dailyTargetProgressTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Exercises done this week: 0/0"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <!-- Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:menu="@menu/bottom_navigation_menu" />
+
+
+</RelativeLayout>

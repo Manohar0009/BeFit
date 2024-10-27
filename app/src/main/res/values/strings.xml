@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BeFit</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="logo_description">Logo for BeFit app</string>
+    <string name="welcome_message">Welcome to BeFit</string>
+    <string name="forgot_password">Forget password?</string>
+    <string name="profile_picture">This is for your profile picture</string>
+
+</resources>

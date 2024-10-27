@@ -1,0 +1,36 @@
+<!-- item_exercise.xml -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Exercise Image -->
+    <ImageView
+        android:id="@+id/exerciseItemImageView"
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/exercisee" />
+
+    <!-- Exercise Title -->
+    <TextView
+        android:id="@+id/exerciseItemTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exercise Title"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <!-- Exercise Countdown Timer -->
+    <TextView
+        android:id="@+id/exerciseItemTimerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:text="5:00"
+        android:gravity="center" />
+
+</LinearLayout>

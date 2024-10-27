@@ -1,0 +1,69 @@
+
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.befit">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BeFit"
+        tools:targetApi="31">
+
+        <!-- Define the LoginActivity as the launcher activity -->
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- Define the RegisterActivity -->
+        <activity android:name=".RegisterActivity" />
+
+        <!-- Define the MainActivity -->
+        <activity android:name=".MainActivity" />
+
+
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- Defining ExerciseActivity -->
+        <activity android:name=".ExerciseActivity"
+            android:exported="true">
+        </activity>
+
+<!--        <activity android:name=".ProgressTracker"-->
+<!--            android:exported="true">-->
+<!--        </activity>-->
+
+        <activity android:name=".ProgressActivity" />
+
+        <activity android:name=".SetTargetActivity" />
+
+        <activity android:name=".ProfileActivity" />
+
+
+        <!--        <Recyclerview android:name=".ExerciseAdapter" />-->
+
+        <activity android:name=".Exercise" />
+
+
+
+
+
+
+
+    </application>
+
+</manifest>
